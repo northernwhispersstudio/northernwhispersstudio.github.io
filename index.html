@@ -31,8 +31,15 @@
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
-      word-break: break-word;
+      word-break: keep-all;
       overflow-wrap: break-word;
+      hyphens: none;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a, span, li, button, label, div {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      hyphens: none;
     }
 
     /* ── NAV ── */
@@ -1089,6 +1096,8 @@
       <li><a href="#studio" class="mobile-link">Studio</a></li>
       <li><a href="#tarifs" class="mobile-link">Tarifs</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="galerie.html" target="_blank" class="mobile-link">Galerie</a></li>
+      <li><a href="merch.html" target="_blank" class="mobile-link">Shop</a></li>
     </ul>
   </div>
 

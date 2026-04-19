@@ -31,11 +31,18 @@
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
-      word-break: break-word;
+      word-break: keep-all;
       overflow-wrap: break-word;
+      hyphens: none;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a, span, li, button, label, div {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      hyphens: none;
     }
 
     /* ── NAV ── */
