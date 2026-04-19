@@ -216,6 +216,14 @@
       font-weight: 500;
     }
 
+    .hero-sub-sep { }
+
+    @media (max-width: 768px) {
+      .hero-sub { font-size: 0.78rem; letter-spacing: 0.12em; }
+      .hero-sub-sep { display: none; }
+      .hero-sub-line { display: block; line-height: 2; }
+    }
+
     .hero-cta {
       margin-top: 40px;
       display: flex;
@@ -1111,7 +1119,9 @@
     <h1 class="hero-title reveal">Northern <span>Whispers</span><br>Studio</h1>
     <div class="hero-divider reveal"></div>
     <p class="hero-slogan reveal">Votre musique mérite un son qui fait la différence&nbsp;!</p>
-    <p class="hero-sub reveal">Enregistrement&nbsp;·&nbsp;Mixage&nbsp;·&nbsp;Mastering&nbsp;·&nbsp;Composition</p>
+    <p class="hero-sub reveal">
+      <span class="hero-sub-line">Enregistrement&nbsp;·&nbsp;Mixage</span><span class="hero-sub-sep">&nbsp;·&nbsp;</span><span class="hero-sub-line">Mastering&nbsp;·&nbsp;Composition</span>
+    </p>
 
     <div class="hero-about reveal">
 
