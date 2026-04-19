@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
 
     :root {
       --navy: #0D1B3E;
@@ -30,6 +31,8 @@
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
+      word-break: break-word;
+      overflow-wrap: break-word;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -249,13 +252,30 @@
 
     .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
 
+    /* ── NAV ── */
+    .nav-back { min-height: 44px; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
+      nav { padding: 0 4%; }
+      .hero { padding: 100px 4% 50px; }
+      .products-section { padding: 16px 4% 60px; }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     }
 
     @media (max-width: 480px) {
+      .hero { padding: 88px 4% 40px; }
+      .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
+      .hero-sub   { font-size: 0.95rem; }
+      .products-section { padding: 12px 4% 52px; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-img-wrap { height: 180px; }
+      .product-name { font-size: 0.9rem; }
+    }
+
+    @media (max-width: 360px) {
       .products-grid { grid-template-columns: 1fr; }
+      .product-img-wrap { height: 220px; }
     }
   </style>
 </head>

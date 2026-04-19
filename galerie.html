@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
 
     :root {
       --navy: #0D1B3E;
@@ -29,6 +30,8 @@
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     /* ── NAV ── */
@@ -255,17 +258,30 @@
 
     .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
 
+    /* ── NAV BACK min-height ── */
+    .nav-back { min-height: 44px; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
       .gallery-item.wide { grid-column: span 2; }
+      .page-header { padding: 100px 4% 48px; }
     }
 
     @media (max-width: 600px) {
+      .page-header { padding: 88px 4% 36px; }
+      .gallery-section { padding: 0 4% 60px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
       .lightbox-prev { left: 8px; }
       .lightbox-next { right: 8px; }
+      .page-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+      nav { padding: 0 4%; }
+    }
+
+    @media (max-width: 360px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.wide { grid-column: span 1; aspect-ratio: 4/3; }
     }
   </style>
 </head>
