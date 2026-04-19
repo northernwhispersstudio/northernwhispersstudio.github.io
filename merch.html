@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Northern Whispers Studio</title>
+  <meta name="description" content="Boutique officielle Northern Whispers Studio – mugs, hoodies, tee-shirts, casquettes, stickers et bracelets. Bientôt disponible." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0D1B3E;
+      --navy-light: #152347;
+      --navy-mid: #1a2d5a;
+      --sky: #A8C8F0;
+      --sky-dark: #7aaee0;
+      --white: #FFFFFF;
+      --white-dim: rgba(255,255,255,0.75);
+      --white-faint: rgba(255,255,255,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+      background: rgba(13,27,62,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--white-faint);
+    }
+
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white-dim);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--sky); }
+    .nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 130px 5% 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(168,200,240,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 8vw, 6rem);
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span { color: var(--sky); }
+
+    .hero-divider {
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--sky), transparent);
+      margin: 0 auto 24px;
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: var(--sky);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+
+    .hero-sub2 {
+      font-size: 0.9rem;
+      color: var(--white-dim);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── PRODUCTS ── */
+    .products-section {
+      padding: 20px 5% 90px;
+      flex: 1;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--white-faint);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+      border-color: rgba(168,200,240,0.3);
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sky), var(--sky-dark));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+      z-index: 1;
+    }
+
+    .product-card:hover::before { transform: scaleX(1); }
+
+    .product-img-wrap {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease;
+      padding: 12px;
+    }
+
+    .product-card:hover .product-img-wrap img { transform: scale(1.04); }
+
+    .product-info {
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: rgba(168,200,240,0.1);
+      border: 1px solid rgba(168,200,240,0.35);
+      color: var(--sky);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 3px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #080f22;
+      padding: 28px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-top: 1px solid var(--white-faint);
+    }
+
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sky);
+    }
+
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/Logo.jpg" alt="NWS" style="width:48px;height:48px;border-radius:50%;object-fit:cover;display:block;" />
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Retour au site
+    </a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <p class="hero-label">Northern Whispers Studio</p>
+    <h1 class="hero-title">Sh<span>op</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Bientôt disponible&nbsp;!</p>
+    <p class="hero-sub2">Restez connectés — la boutique arrive.</p>
+  </div>
+
+  <!-- ── PRODUCTS ── -->
+  <div class="products-section">
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-32.jpg" alt="Mugs" loading="eager" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Mugs</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-34.jpg" alt="Hoodie" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Hoodie</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-36.jpg" alt="Tee-shirt" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Tee-shirt</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-38.jpg" alt="Casquette" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Casquette</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-39.jpg" alt="Stickers" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Stickers</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="images/Brand-Book-40.jpg" alt="Bracelets" loading="lazy" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Bracelets</div>
+          <span class="product-badge">Bientôt disponible</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-brand">Northern Whispers Studio</div>
+    <div class="footer-copy">© 2024 Northern Whispers Studio · Toulouse</div>
+  </footer>
+
+</body>
+</html>
