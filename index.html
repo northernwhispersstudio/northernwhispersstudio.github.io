@@ -216,14 +216,11 @@
       font-weight: 500;
     }
 
-    .desktop-only { display: inline; }
-    .mobile-only  { display: none; }
+    .mobile-br { display: none; }
 
     @media (max-width: 768px) {
-      .desktop-only { display: none; }
-      .mobile-only  { display: inline; }
-      .hero-sub { font-size: 0.78rem; letter-spacing: 0.12em; }
-      .mobile-only .hero-sub-line { display: block; line-height: 2; }
+      .mobile-br { display: block; }
+      .hero-sub  { font-size: 0.78rem; letter-spacing: 0.12em; }
     }
 
     .hero-cta {
@@ -1121,10 +1118,7 @@
     <h1 class="hero-title reveal">Northern <span>Whispers</span><br>Studio</h1>
     <div class="hero-divider reveal"></div>
     <p class="hero-slogan reveal">Votre musique mérite un son qui fait la différence&nbsp;!</p>
-    <p class="hero-sub reveal">
-      <span class="desktop-only">Enregistrement&nbsp;·&nbsp;Mixage&nbsp;·&nbsp;Mastering&nbsp;·&nbsp;Composition</span>
-      <span class="mobile-only"><span class="hero-sub-line">Record&nbsp;·&nbsp;Mix</span><span class="hero-sub-line">Master&nbsp;·&nbsp;Compo</span></span>
-    </p>
+    <p class="hero-sub reveal">Enregistrement&nbsp;·&nbsp;Mixage<br class="mobile-br">&nbsp;·&nbsp;Mastering&nbsp;·&nbsp;Composition</p>
 
     <div class="hero-about reveal">
 
