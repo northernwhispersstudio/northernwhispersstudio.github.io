@@ -1,3 +1,4 @@
 *.psb
 *.psd
+*.mov
 node_modules/
