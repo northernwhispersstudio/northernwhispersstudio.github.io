@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(where magick *)",
+      "Bash(where convert *)",
+      "Bash(where ffmpeg *)",
+      "Bash(where node *)",
+      "Bash(npx --version)",
+      "Bash(node -e ' *)",
+      "Bash(cd /tmp)",
+      "Bash(npm install *)",
+      "Bash(node *)"
+    ]
+  }
+}
