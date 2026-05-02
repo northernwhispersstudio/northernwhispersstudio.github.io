@@ -105,7 +105,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
-      white-space: nowrap;
+      white-space: normal;
       transition: background 0.2s, color 0.2s;
     }
 
@@ -217,7 +217,7 @@
     .hero-sub {
       font-size: clamp(0.85rem, 1.6vw, 1rem);
       color: var(--white-dim);
-      letter-spacing: 0.18em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -298,6 +298,7 @@
     .section-title {
       font-family: 'Gotham', sans-serif;
       font-weight: 900;
+      word-break: break-word;
       font-size: clamp(1.8rem, 4vw, 3rem);
       line-height: 1.1;
       text-transform: uppercase;
@@ -946,7 +947,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .insta-card-btn svg { width: 13px; height: 13px; fill: var(--navy); }
@@ -996,10 +997,12 @@
     }
 
     .avis-text {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--white-dim);
-      line-height: 1.65;
+      line-height: 1.6;
       font-style: italic;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     .avis-source {
@@ -1094,10 +1097,12 @@
     .contact-cta-text {
       font-family: 'Gotham', sans-serif;
       font-weight: 800;
-      font-size: 1.5rem;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
       text-transform: uppercase;
-      line-height: 1.2;
+      line-height: 1.3;
       margin-bottom: 8px;
+      word-break: break-word;
+      max-width: 700px;
     }
 
     .contact-cta-sub { color: var(--white-dim); font-size: 0.9rem; line-height: 1.65; margin-bottom: 8px; max-width: 480px; }

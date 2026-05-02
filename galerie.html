@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galerie – Northern Whispers Studio</title>
   <meta name="description" content="Galerie photo du studio Northern Whispers Studio à Toulouse." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Ultra.ttf'); font-weight: 900; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Bold.ttf'); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Bold.ttf'); font-weight: 800; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-BoldItalic.ttf'); font-weight: 700; font-style: italic; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Medium.ttf'); font-weight: 500; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Book.ttf'); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-BookItalic.ttf'); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Light.ttf'); font-weight: 300; font-style: normal; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     img { max-width: 100%; height: auto; }
 
     :root {
-      --navy: #0D1B3E;
-      --navy-light: #152347;
-      --navy-mid: #1a2d5a;
-      --sky: #A8C8F0;
-      --sky-dark: #7aaee0;
+      --navy: #002E5B;
+      --navy-light: #001F45;
+      --navy-mid: #002850;
+      --sky: #D2ECFF;
+      --sky-dark: #A8CCEA;
       --white: #FFFFFF;
       --white-dim: rgba(255,255,255,0.75);
       --white-faint: rgba(255,255,255,0.1);
@@ -26,7 +32,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Gotham', sans-serif;
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
@@ -51,7 +57,7 @@
       justify-content: space-between;
       padding: 0 5%;
       height: 64px;
-      background: rgba(13,27,62,0.95);
+      background: rgba(0,46,91,0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--white-faint);
     }
@@ -64,7 +70,7 @@
       gap: 8px;
       color: var(--white-dim);
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.82rem;
       letter-spacing: 0.08em;
@@ -82,7 +88,7 @@
     }
 
     .page-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.22em;
@@ -92,7 +98,7 @@
     }
 
     .page-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: clamp(2rem, 5vw, 3.5rem);
       text-transform: uppercase;
@@ -195,7 +201,7 @@
     }
 
     .lightbox-caption {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
       letter-spacing: 0.14em;
@@ -228,8 +234,8 @@
       position: fixed;
       top: 50%; transform: translateY(-50%);
       width: 48px; height: 48px;
-      background: rgba(13,27,62,0.75);
-      border: 1px solid rgba(168,200,240,0.2);
+      background: rgba(0,46,91,0.75);
+      border: 1px solid rgba(210,236,255,0.2);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
@@ -237,14 +243,14 @@
       z-index: 201;
     }
 
-    .lightbox-nav:hover { background: rgba(168,200,240,0.15); border-color: var(--sky); }
+    .lightbox-nav:hover { background: rgba(210,236,255,0.15); border-color: var(--sky); }
     .lightbox-nav svg { width: 20px; height: 20px; stroke: var(--white); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .lightbox-prev { left: 20px; }
     .lightbox-next { right: 20px; }
 
     /* ── FOOTER ── */
     footer {
-      background: #080f22;
+      background: #001030;
       padding: 28px 5%;
       display: flex;
       align-items: center;
@@ -255,7 +261,7 @@
     }
 
     .footer-brand {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 0.85rem;
       letter-spacing: 0.12em;
