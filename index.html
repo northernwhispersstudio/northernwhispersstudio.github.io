@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Northern Whispers Studio – Enregistrement & Production à Toulouse</title>
   <meta name="description" content="Studio d'enregistrement professionnel à Toulouse. Enregistrement, mixage, mastering et composition musicale. Votre musique mérite un son qui fait la différence !" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Ultra.ttf'); font-weight: 900; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Bold.ttf'); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Bold.ttf'); font-weight: 800; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-BoldItalic.ttf'); font-weight: 700; font-style: italic; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Medium.ttf'); font-weight: 500; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Book.ttf'); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-BookItalic.ttf'); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham-Light.ttf'); font-weight: 300; font-style: normal; }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     img { max-width: 100%; height: auto; }
 
     :root {
-      --navy: #0D1B3E;
-      --navy-light: #152347;
-      --navy-mid: #1a2d5a;
-      --sky: #A8C8F0;
-      --sky-dark: #7aaee0;
+      --navy: #002E5B;
+      --navy-light: #001F45;
+      --navy-mid: #002850;
+      --sky: #D2ECFF;
+      --sky-dark: #A8CCEA;
       --white: #FFFFFF;
       --white-dim: rgba(255,255,255,0.75);
       --white-faint: rgba(255,255,255,0.1);
@@ -27,7 +33,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Gotham', sans-serif;
       background-color: var(--navy);
       color: var(--white);
       overflow-x: hidden;
@@ -59,7 +65,7 @@
     }
 
     .nav-logo {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 0.95rem;
       letter-spacing: 0.12em;
@@ -142,8 +148,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 70% 60% at 50% 40%, rgba(168,200,240,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(168,200,240,0.06) 0%, transparent 60%);
+        radial-gradient(ellipse 70% 60% at 50% 40%, rgba(210,236,255,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(210,236,255,0.06) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -179,7 +185,7 @@
     }
 
     .hero-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: clamp(2rem, 6vw, 4.5rem);
       line-height: 1.05;
@@ -199,7 +205,7 @@
     }
 
     .hero-slogan {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: clamp(1.1rem, 2.5vw, 1.55rem);
       color: var(--sky);
@@ -236,7 +242,7 @@
       padding: 14px 32px;
       min-height: 44px;
       border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.88rem;
       letter-spacing: 0.1em;
@@ -253,9 +259,9 @@
     }
 
     .btn-primary:hover {
-      background: #bcd7f5;
+      background: #5a7fa8;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(168,200,240,0.35);
+      box-shadow: 0 8px 24px rgba(210,236,255,0.35);
     }
 
     .btn-outline {
@@ -280,7 +286,7 @@
     }
 
     .section-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.22em;
@@ -290,7 +296,7 @@
     }
 
     .section-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: clamp(1.8rem, 4vw, 3rem);
       line-height: 1.1;
@@ -318,14 +324,14 @@
     }
 
     .hero-about-block {
-      background: rgba(168,200,240,0.05);
-      border: 1px solid rgba(168,200,240,0.12);
+      background: rgba(210,236,255,0.05);
+      border: 1px solid rgba(210,236,255,0.12);
       border-radius: 6px;
       padding: 22px 20px;
     }
 
     .hero-about-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.7rem;
       letter-spacing: 0.2em;
@@ -385,12 +391,12 @@
       transition: transform 0.3s;
     }
 
-    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); border-color: rgba(168,200,240,0.3); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); border-color: rgba(210,236,255,0.3); }
     .service-card:hover::before { transform: scaleX(1); }
 
     .service-icon {
       width: 52px; height: 52px;
-      background: rgba(168,200,240,0.12);
+      background: rgba(210,236,255,0.12);
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 22px;
@@ -399,7 +405,7 @@
     .service-icon svg { width: 26px; height: 26px; fill: var(--sky); }
 
     .service-card h3 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 1.15rem;
       text-transform: uppercase;
@@ -421,8 +427,8 @@
     .service-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 
     .tag {
-      background: rgba(168,200,240,0.1);
-      border: 1px solid rgba(168,200,240,0.25);
+      background: rgba(210,236,255,0.1);
+      border: 1px solid rgba(210,236,255,0.25);
       color: var(--sky);
       font-size: 0.74rem;
       font-weight: 600;
@@ -440,7 +446,7 @@
     .tarifs-subtitle { margin-bottom: 40px; }
 
     .tarifs-block-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.8rem;
       letter-spacing: 0.2em;
@@ -467,10 +473,10 @@
       transition: border-color 0.2s, transform 0.2s;
     }
 
-    .tarif-item:hover { border-color: rgba(168,200,240,0.4); transform: translateY(-3px); }
+    .tarif-item:hover { border-color: rgba(210,236,255,0.4); transform: translateY(-3px); }
 
     .tarif-item .t-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.82rem;
       text-transform: uppercase;
@@ -481,7 +487,7 @@
     }
 
     .tarif-item .t-price {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 1.6rem;
       color: var(--white);
@@ -531,7 +537,7 @@
       top: 16px; right: 16px;
       background: var(--sky);
       color: var(--navy);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.65rem;
       letter-spacing: 0.1em;
@@ -541,7 +547,7 @@
     }
 
     .pack-num {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 0.72rem;
       color: var(--sky);
@@ -551,7 +557,7 @@
     }
 
     .pack-name {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 1.35rem;
       text-transform: uppercase;
@@ -567,7 +573,7 @@
     }
 
     .pack-price-new {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 2.2rem;
       color: var(--sky);
@@ -584,8 +590,8 @@
 
     .pack-economy {
       display: inline-block;
-      background: rgba(168,200,240,0.12);
-      border: 1px solid rgba(168,200,240,0.3);
+      background: rgba(210,236,255,0.12);
+      border: 1px solid rgba(210,236,255,0.3);
       color: var(--sky);
       font-size: 0.74rem;
       font-weight: 700;
@@ -625,8 +631,8 @@
     .pack-features li.feature-highlight {
       color: var(--white);
       font-weight: 600;
-      background: rgba(168,200,240,0.08);
-      border: 1px solid rgba(168,200,240,0.25);
+      background: rgba(210,236,255,0.08);
+      border: 1px solid rgba(210,236,255,0.25);
       border-radius: 4px;
       padding: 7px 10px;
       margin: 2px 0;
@@ -638,7 +644,7 @@
 
     .pack-features li.feature-highlight strong {
       color: var(--sky);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       letter-spacing: 0.04em;
     }
@@ -688,7 +694,7 @@
       bottom: 0; left: 0; right: 0;
       padding: 28px 16px 14px;
       background: linear-gradient(to top, rgba(13,27,62,0.88) 0%, transparent 100%);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.78rem;
       letter-spacing: 0.12em;
@@ -750,7 +756,7 @@
     }
 
     .lightbox-caption {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
       letter-spacing: 0.14em;
@@ -785,7 +791,7 @@
       top: 50%; transform: translateY(-50%);
       width: 48px; height: 48px;
       background: rgba(13,27,62,0.75);
-      border: 1px solid rgba(168,200,240,0.2);
+      border: 1px solid rgba(210,236,255,0.2);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
@@ -793,7 +799,7 @@
       z-index: 201;
     }
 
-    .lightbox-nav:hover { background: rgba(168,200,240,0.15); border-color: var(--sky); }
+    .lightbox-nav:hover { background: rgba(210,236,255,0.15); border-color: var(--sky); }
     .lightbox-nav svg { width: 20px; height: 20px; stroke: var(--white); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .lightbox-prev { left: 20px; }
     .lightbox-next { right: 20px; }
@@ -849,7 +855,7 @@
     .insta-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 16px 48px rgba(0,0,0,0.5);
-      border-color: rgba(168,200,240,0.35);
+      border-color: rgba(210,236,255,0.35);
     }
 
     .insta-card-header {
@@ -871,7 +877,7 @@
     .insta-logo svg { width: 18px; height: 18px; fill: #fff; }
 
     .insta-handle {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.82rem;
       color: var(--white);
@@ -895,7 +901,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(168,200,240,0.06) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(210,236,255,0.06) 0%, transparent 70%);
     }
 
     .insta-play {
@@ -908,7 +914,7 @@
     }
 
     .insta-card:hover .insta-play {
-      background: rgba(168,200,240,0.2);
+      background: rgba(210,236,255,0.2);
       border-color: var(--sky);
     }
 
@@ -935,7 +941,7 @@
       background: var(--sky);
       color: var(--navy);
       border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.75rem;
       letter-spacing: 0.08em;
@@ -969,7 +975,7 @@
 
     .avis-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(168,200,240,0.25);
+      border-color: rgba(210,236,255,0.25);
     }
 
     .avis-stars {
@@ -981,7 +987,7 @@
     }
 
     .avis-name {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.88rem;
       color: var(--white);
@@ -1049,7 +1055,7 @@
 
     .contact-icon {
       width: 42px; height: 42px;
-      background: rgba(168,200,240,0.1);
+      background: rgba(210,236,255,0.1);
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
     }
@@ -1059,7 +1065,7 @@
     .contact-item-body { text-align: center; }
 
     .contact-item-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 0.72rem;
       letter-spacing: 0.14em;
@@ -1086,7 +1092,7 @@
     }
 
     .contact-cta-text {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 1.5rem;
       text-transform: uppercase;
@@ -1104,7 +1110,7 @@
       background: var(--sky);
       color: var(--navy);
       border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 800;
       font-size: 0.88rem;
       letter-spacing: 0.1em;
@@ -1114,9 +1120,9 @@
     }
 
     .btn-linktree:hover {
-      background: #bcd7f5;
+      background: #5a7fa8;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(168,200,240,0.35);
+      box-shadow: 0 8px 24px rgba(210,236,255,0.35);
     }
 
     .btn-linktree svg { width: 18px; height: 18px; fill: var(--navy); }
@@ -1134,7 +1140,7 @@
     }
 
     .footer-brand {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 900;
       font-size: 0.85rem;
       letter-spacing: 0.12em;
@@ -1173,7 +1179,7 @@
       padding: 14px 0;
       color: var(--white);
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Gotham', sans-serif;
       font-weight: 700;
       font-size: 1rem;
       letter-spacing: 0.1em;
